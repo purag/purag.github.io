@@ -1,0 +1,60 @@
+@import 'https://fonts.googleapis.com/css?family=Inconsolata:400,700';
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #2a2a2a;
+  font-family: Inconsolata, monospace;
+  cursor: text;
+}
+
+header {
+  background: #fff;
+}
+
+header:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  width: 0;
+}
+
+.tab {
+  background: #2a2a2a;
+  color: #fff;
+  padding: 5px 10px;
+  float: left;
+}
+
+.tab.active, .tab.close {
+  text-decoration: underline;
+}
+
+.tab.close {
+  float: right;
+}
+
+.buffer {
+  color: #fff;
+  padding: 5px 10px;
+  counter-reset: line;
+  white-space: pre;
+}
+
+.buffer .line {
+}
+
+.buffer .line:before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 20px;
+  text-align: right;
+  margin-right: 10px;
+  color: yellow;
+}
+
+.buffer .line .character {
+  margin: 0px 1px;
+}
