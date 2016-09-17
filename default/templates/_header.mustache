@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{{site-title}}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    {{#stylesheet_bundle}}/css/all.css{{/stylesheet_bundle}} 
+    {{#javascript_bundle}}/js/all.js{{/javascript_bundle}}
+  </head>
+  <body>
+    <header>
+      <h1>{{site-title}}</h1>
+    </header>
+    <nav>
+      <ul>
+        {{#navbar}}
+        <li><a href="{{{href}}}">{{label}}</a></li>
+        {{/navbar}}
+      </ul>
+    </nav>
+
