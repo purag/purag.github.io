@@ -1,5 +1,5 @@
 {
-  "template_dir": "", 
+  "template_dir": "res", 
   "content_dir": "data",
   "output_dir": "out",
 
