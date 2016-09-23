@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "My personal website & portfolio.",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/purag/purag.me.git"
@@ -15,7 +14,5 @@
     "url": "https://github.com/purag/purag.me/issues"
   },
   "homepage": "http://purag.me",
-  "dependencies": {
-    "punch": "^0.5.46"
-  }
+  "dependencies": {}
 }
