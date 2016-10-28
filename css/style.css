@@ -23,6 +23,7 @@ body {
   flex: 0 1 1200px;
   display: flex;
   flex-wrap: wrap;
+  padding: 30px;
   font-family: "Catamaran", sans-serif;
 }
 
@@ -41,7 +42,7 @@ h1 {
   padding: 15px;
   background: #1a252c;
   border: 2px solid rgba(0,0,0,0.3);
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
   font-family: "Inconsolata", monospace;
   font-weight: 700;
@@ -68,31 +69,50 @@ h1 span.blink {
   align-self: flex-start;
 }
 
-nav a {
-  display: block;
+nav {
   text-align: right;
-  text-decoration: none;
-  color: #777;
-  font-weight: 500;
-  transition: all 0.1s ease-in-out;
 }
 
-nav:hover a {
+nav .sub {
+  font-size: 0.8em;
+  text-transform: lowercase;
+  margin-bottom: 15px;
+}
+
+nav .sub:hover a {
   color: #bbb;
 }
 
-nav a:hover {
+nav > a, nav .sub a {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: all 0.1s ease-in-out;
+}
+
+nav:hover {
+  color: #bbb;
+}
+
+nav > a:hover, nav .sub a:hover {
   color: #222;
 }
 
-nav a.active {
+nav > a.active {
   color: #f05e25;
+  font-weight: 700;
+}
+
+nav .sub a.active {
+  color: #000;
   font-weight: 700;
 }
 
 main {
   flex: 1;
-  padding: 0 15px;
+  padding: 0 40px;
 }
 
 h2, h3 {
