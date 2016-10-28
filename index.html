@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Purag Moumdjian</title>
     <style>
-      @import url('https://fonts.googleapis.com/css?family=Catamaran|Inconsolata|Roboto+Slab');
+      @import url('https://fonts.googleapis.com/css?family=Martel|Catamaran|Inconsolata|Roboto+Slab');
 
       @keyframes blink {
         0%, 20% {
@@ -22,8 +22,14 @@
 
       body {
         display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        flex: 0 1 1200px;
+        display: flex;
         flex-wrap: wrap;
-        padding: 0 15px;
+        font-family: "Catamaran", sans-serif;
       }
 
       header {
@@ -36,11 +42,13 @@
       h1 {
         margin: 0;
         display: inline-block;
+        width: 200px;
         box-sizing: border-box;
         padding: 15px;
         background: #1a252c;
         border: 2px solid rgba(0,0,0,0.3);
         border-radius: 3px;
+        text-align: center;
         font-family: "Inconsolata", monospace;
         font-weight: 700;
         font-size: 2.5em;
@@ -61,36 +69,105 @@
         animation: blink 1s infinite;
       }
 
-      .sidebar, main {
-        padding: 15px;
+      .sidebar {
+        flex: 0 0 200px;
+        align-self: flex-start;
       }
 
-      nav, .sidebar {
-        flex: 0 0 250px;
-        height: 200px;
+      nav a {
+        display: block;
+        text-align: right;
+        text-decoration: none;
+        color: #777;
+        font-weight: 500;
+        transition: all 0.1s ease-in-out;
+      }
+
+      nav:hover a {
+        color: #bbb;
+      }
+
+      nav a:hover {
+        color: #222;
+      }
+
+      nav a.active {
+        color: #f05e25;
+        font-weight: 700;
       }
 
       main {
         flex: 1;
-        border: 1px solid #ddd;
-        border-width: 0 1px;
-        height: 200px;
+        padding: 0 15px;
       }
 
+      h2, h3 {
+        font-weight: 600;
+      }
+
+      h2 {
+        margin: 0 0 15px 0;
+        font-size: 2em;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 1.35em;
+      }
+
+      p {
+        margin: 0 0 15px 0;
+        font-family: "Martel", serif;
+        font-weight: 300;
+      }
+
+      p a {
+        text-decoration: none;
+        color: #f05e25;
+        transition: all 0.1s ease-in-out;
+      }
+
+      p a:hover {
+        color: #c04729;
+        font-weight: 700;
+      }
+
+      p code {
+        font-family: "Inconsolata", monospace;
+        background: 
+      }
     </style>
   </head>
   <body>
-    <header>
-      <h1><a href="http://purag.me">purag</a> ><span class="blink">_</span></h1>
-    </header>
-    <nav>
-hi
-    </nav>
-    <main>
-bye
-    </main>
-    <aside class="sidebar">
-so long
-    </aside>
+    <div class="container">
+      <header>
+        <h1><a href="http://purag.me">purag</a> ><span class="blink">_</span></h1>
+      </header>
+      <nav class="sidebar">
+        <a href="/" class="active">Résumé</a>
+        <a href="about">About Me</a>
+        <a href="blog">Blog</a>
+      </nav>
+      <main>
+        <h2>Hi, I'm Purag.</h2>
+        <p>
+          I'm a junior at <a href="http://ucsd.edu">UC San Diego</a> studying <a href="http://cse.ucsd.edu">Computer Science</a>. My primary interests are in computability theory, computer architecture, and compiler construction.</p>
+        </p>
+        <h3>Experience</h3>
+        <p>
+          Some stuff would go here, I guess!
+        </p>
+        <h3>Projects</h3>
+        <p>
+          And even more stuff here!
+        </p>
+      </main>
+      <aside class="sidebar">
+        <h3>Skills</h3>
+        <p>
+          A list of things would go here!
+        </p>
+      </aside>
+    </div>
   </body>
 </html>
