@@ -71,6 +71,7 @@ h1 span.blink {
 
 nav {
   text-align: right;
+  position: fixed;
 }
 
 nav .sub {
@@ -86,13 +87,9 @@ nav .sub:hover a {
 nav > a, nav .sub a {
   display: block;
   text-decoration: none;
-  color: #777;
+  color: #bbb;
   font-weight: 500;
   transition: all 0.1s ease-in-out;
-}
-
-nav:hover {
-  color: #bbb;
 }
 
 nav > a:hover, nav .sub a:hover {
@@ -102,6 +99,10 @@ nav > a:hover, nav .sub a:hover {
 nav > a.active {
   color: #f05e25;
   font-weight: 700;
+}
+
+nav > a + a.active {
+  margin-top: 15px;
 }
 
 nav .sub a.active {
