@@ -54,6 +54,7 @@ h1 {
 h1 a {
   text-decoration: none;
   color: #f05e25;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 h1 a:hover {
@@ -89,7 +90,7 @@ nav > a, nav .sub a {
   text-decoration: none;
   color: #bbb;
   font-weight: 500;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 nav > a:hover, nav .sub a:hover {
@@ -138,12 +139,12 @@ p {
 p a {
   text-decoration: none;
   color: #f05e25;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 p a:hover {
   color: #c04729;
-  font-weight: 700;
+  margin-bottom: 2px;
 }
 
 code {
