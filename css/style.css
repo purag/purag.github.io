@@ -160,17 +160,13 @@ code {
 }
 
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
   margin-bottom: 15px;
 }
 
 .experience {
-  flex: 1 1 250px;
   box-sizing: border-box;
   display: inline-block;
-  margin: 5px;
+  margin: 5px 0;
   background: #fff;
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 5px;
