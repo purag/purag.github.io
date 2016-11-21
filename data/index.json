@@ -1,0 +1,27 @@
+{
+  "experience": [
+    {
+      "role":     "Software Engineer Intern",
+      "start":    "Jun 2016",
+      "end":      "Sep 2016",
+      "company":  "Pure Storage",
+      "tasks": [
+        "Implemented database schema changes throughout kernel, CLI, and REST stack",
+        "Manipulated VMs using VMWare vSphere Web Client APIs in a customer-facing product"
+      ],
+      "skills":   ["Java", "C++", "Python"]
+    },
+    {
+      "role":     "Tutor",
+      "start":    "Mar 2015",
+      "end":      "present",
+      "company":  "UC San Diego CSE Department",
+      "tasks": [
+        "Assisting students during lab hours and grading programming assignments",
+        "Holding office hours to go over homework problems and exam solutions",
+        "Leading discussion sessions to go over upcoming assignments"
+      ],
+      "skills":   ["Java", "C", "C++", "SPARC Assembly", "Data Structures", "Computability Theory"]
+    }
+  ]
+}
