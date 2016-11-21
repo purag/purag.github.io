@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for f in `ls views/`; do
+for f in `ls _views/`; do
   name="${f%.pug}"
-  pug -P -O "data/${name}.json" "views/$f" -o out
+  pug -P -O "_data/${name}.json" "_views/$f" -o .
 done
