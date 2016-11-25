@@ -1,0 +1,48 @@
+include mixins.pug
+
+block nav
+  -var cur = "/"
+  -
+   var nav = [
+    {
+      "url": "/",
+      "title": "Résumé",
+      "sub": {
+        "#experience": "Experience",
+        "#projects": "Projects"
+      }
+    },
+    {
+      "url": "/about",
+      "title": "About Me"
+    },
+    {
+      "url": "/blog",
+      "title": "Blog"
+    }
+   ]
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title Purag Moumdjian
+    link(rel="stylesheet" href="css/style.css")
+  body
+    .container
+      .sidebar
+        nav
+          header
+            h1 #[a(href="http://purag.me") purag] >#[span.blink _]
+          each item in nav
+            if cur === item.url
+              a.active(href=item.url)= item.title
+              if item.sub
+                .sub
+                  each title, url in item.sub
+                    a(href=url)= title
+            else
+              a(href=item.url)= item.title
+      main
+        block content
+      block sidebar

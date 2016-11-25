@@ -1,0 +1,12 @@
+mixin experience (e)
+  article.experience
+    h4= e.role
+    time #{e.start} &ndash; #{e.end}
+    if e.company
+      h5= e.company
+    ul
+      each t in e.tasks
+        li= t
+    dl
+      each s in e.skills
+        dt= s

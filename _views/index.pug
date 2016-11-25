@@ -1,46 +1,17 @@
-mixin experience (e)
-  article.experience
-    h4= e.role
-    time #{e.start} &ndash; #{e.end}
-    if e.company
-      h5= e.company
-    ul
-      each t in e.tasks
-        li= t
-    dl
-      each s in e.skills
-        dt= s
+extends includes/page.pug
 
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    title Purag Moumdjian
-    link(rel="stylesheet" href="css/style.css")
-  body
-    .container
-      .sidebar
-        nav
-          header
-            h1 #[a(href="http://purag.me") purag] >#[span.blink _]
-          a.active(href="/") Résumé
-          .sub
-            a.active(href="#experience") Experience
-            a(href="#experience") Projects
-            a(href="#experience") Skills
-          a(href="about") About Me
-          a(href="blog") Blog
-          a(href="http://stackoverflow.com/u/814761") Stack Overflow
-      main
-        h2 Hi, I'm Purag
-        p I'm a junior at #[a(href="http://ucsd.edu") UC San Diego] studying #[a(href="http://cse.ucsd.edu") Computer Science]. My primary interests are in computability theory, computer architecture, and compiler construction.
-        h3 Experience
-        .card-container
-          each e in experience
-            +experience(e)
-        h3 Projects
-        p And even more stuff here!
-      aside.sidebar
-        h3 Skills
-        p A list of things would go here!
+block content
+  h2 Hi, I'm Purag
+  p I'm a junior at #[a(href="http://ucsd.edu") UC San Diego] studying #[a(href="http://cse.ucsd.edu") Computer Science]. My primary interests are in computability theory, computer architecture, and compiler construction.
+  h3 Experience
+  .card-container
+    each e in experience
+      +experience(e)
+  h3 Projects
+  p And even more stuff here!
+
+block sidebar
+  aside.sidebar
+    h3 Skills
+    p A list of things would go here!
 
