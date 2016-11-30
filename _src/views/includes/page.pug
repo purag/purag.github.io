@@ -1,33 +1,34 @@
 include mixins.pug
 
+-
+ var nav = [
+  {
+    "url": "/",
+    "title": "Résumé",
+    "sub": {
+      "#experience": "Experience",
+      "#projects": "Projects"
+    }
+  },
+  {
+    "url": "/about",
+    "title": "About Me"
+  },
+  {
+    "url": "/blog",
+    "title": "Blog"
+  }
+ ]
+
 block nav
   -var cur = "/"
-  -
-   var nav = [
-    {
-      "url": "/",
-      "title": "Résumé",
-      "sub": {
-        "#experience": "Experience",
-        "#projects": "Projects"
-      }
-    },
-    {
-      "url": "/about",
-      "title": "About Me"
-    },
-    {
-      "url": "/blog",
-      "title": "Blog"
-    }
-   ]
 
 doctype html
 html
   head
     meta(charset="utf-8")
     title Purag Moumdjian
-    link(rel="stylesheet" href="css/style.css")
+    link(rel="stylesheet" href="/css/style.css")
     script(src="https://use.fontawesome.com/8f43ab24d9.js")
   body
     .container
