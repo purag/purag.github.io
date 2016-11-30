@@ -219,3 +219,23 @@ code {
   font-size: 0.9em;
   line-height: 1.6em;
 }
+
+a.ext {
+  display: block;
+  margin: 3px 0;
+  padding: 8px;
+  border-radius: 3px;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  text-decoration: none;
+  font-size: 0.8em;
+  color: #000;
+}
+
+a.ext:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+a.ext i {
+  width: 20px;
+  vertical-align: middle;
+}
