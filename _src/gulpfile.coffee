@@ -6,8 +6,8 @@ pug  = require "gulp-pug"
 del  = require "del"
 
 # Set the destination directory for the build
-SRC  = "_src/"
-DEST = "."
+SRC  = "."
+DEST = ".."
 
 # Copy the CSS to the build directory
 gulp.task "css", ->
@@ -16,14 +16,15 @@ gulp.task "css", ->
 
 # Render the pug templates w/ their respective locals
 gulp.task "html", ->
-  gulp.src ["#{SRC}views/**/*.pug", "!#{SRC}views/includes/*"]
+  gulp.src ["#{SRC}/views/**/*.pug", "!#{SRC}/views/includes/*"]
     .pipe data (f) ->
-      f = path.relative("./_src/views", f.path).slice(0, -4)
-      JSON.parse fs.readFileSync "#{SRC}data/#{f}.json", "utf-8"
+      f = path.relative("#{SRC}/views", f.path).slice(0, -4)
+      JSON.parse fs.readFileSync "#{SRC}/data/#{f}.json", "utf-8"
     .pipe pug()
     .pipe gulp.dest(DEST)
 
+# Wipe everything if necessary
 gulp.task "clean", ->
-  del(["**/*.html", "./css"])
+  del(["#{DEST}/**/*.html", "#{DEST}/css"])
 
 gulp.task "default", ["html", "css"]
