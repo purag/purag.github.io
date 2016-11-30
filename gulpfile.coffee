@@ -26,4 +26,4 @@ gulp.task "html", ->
 gulp.task "clean", ->
   del(["**/*.html", "./css"])
 
-gulp.task "default", ["clean", "html", "css"]
+gulp.task "default", ["html", "css"]
