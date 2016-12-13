@@ -144,6 +144,7 @@ p a {
 
 p a:hover {
   color: #c04729;
+  text-decoration: underline;
   margin-bottom: 2px;
 }
 
