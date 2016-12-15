@@ -5,6 +5,7 @@ fs   = require "fs"
 pug  = require "gulp-pug"
 del  = require "del"
 sass = require "gulp-sass"
+yaml = require "node-yaml"
 
 # Set the destination directory for the build
 SRC  = "."
@@ -30,7 +31,7 @@ gulp.task "html", ->
   from paths.html
     .pipe data (f) ->
       f = path.relative("#{SRC}/views", f.path).slice(0, -4)
-      JSON.parse fs.readFileSync "#{SRC}/data/#{f}.json", "utf-8"
+      yaml.readSync "#{SRC}/data/#{f}"
     .pipe pug()
     .pipe to DEST
 

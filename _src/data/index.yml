@@ -1,0 +1,63 @@
+experience:
+  -
+    role: 'Software Engineer Intern - upcoming'
+    start: 'Jun 2017'
+    end: 'Sep 2017'
+    company: Microsoft
+    tasks:
+      - 'Working on Cortana under the Windows Shell Team'
+    skills: []
+  -
+    role: 'Software Engineer Intern'
+    start: 'Jun 2016'
+    end: 'Sep 2016'
+    company: 'Pure Storage'
+    tasks:
+      - 'Implemented database schema changes throughout kernel, CLI, and REST stack'
+      - 'Manipulated VMs using VMWare vSphere Web Client APIs in a customer-facing product'
+    skills:
+      - Java
+      - C++
+      - Python
+  -
+    role: Tutor
+    start: 'Mar 2015'
+    end: present
+    company: 'UC San Diego CSE Department'
+    tasks:
+      - 'Assisting students during lab hours and grading programming assignments'
+      - 'Holding office hours to go over homework problems and exam solutions'
+      - 'Leading discussion sessions to go over upcoming assignments'
+    skills:
+      - Java
+      - C
+      - C++
+      - 'SPARC Assembly'
+      - 'Data Structures'
+      - 'Computability Theory'
+  -
+    role: 'Freelance Web Developer'
+    start: '2008'
+    end: present
+    tasks:
+      - 'Creating websites and web applications for ecommerce, portfolio, events, etc.'
+      - 'Developing for content management systems like WordPress and Joomla'
+    skills:
+      - HTML
+      - CSS
+      - PHP
+      - JavaScript
+  -
+    role: Webmaster/Developer
+    start: '2013'
+    end: '2014'
+    company: 'Armenian Youth Federation, Western Region'
+    tasks:
+      - 'Developed a WordPress theme with custom front-end and administration widgets'
+      - 'Optimized the theme for load times and mobile viewing'
+    skills:
+      - HTML
+      - CSS
+      - PHP
+      - JavaScript
+projects: []
