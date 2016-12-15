@@ -1,1 +1,1 @@
-exclude: ["package.json"]
+exclude: ["package.json", "CNAME"]
