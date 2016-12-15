@@ -4,27 +4,38 @@ path = require "path"
 fs   = require "fs"
 pug  = require "gulp-pug"
 del  = require "del"
+sass = require "gulp-sass"
 
 # Set the destination directory for the build
 SRC  = "."
 DEST = ".."
 
-# Copy the CSS to the build directory
+paths =
+  html: ["#{SRC}/views/**/*.pug", "!#{SRC}/views/includes/*"]
+  css:  ["#{SRC}/sass/*.sass"]
+  dest: ["#{DEST}/**/*.html", "#{DEST}/assets/"]
+
+task = gulp.task
+from = gulp.src
+to   = gulp.dest
+
+# Compile the SASS and copy to build directory
 gulp.task "css", ->
-  gulp.src ["#{SRC}css/style.css"], {base: SRC}
-    .pipe gulp.dest(DEST)
+  from paths.css
+    .pipe sass().on "error", sass.logError
+    .pipe to "#{DEST}/assets/css"
 
 # Render the pug templates w/ their respective locals
 gulp.task "html", ->
-  gulp.src ["#{SRC}/views/**/*.pug", "!#{SRC}/views/includes/*"]
+  from paths.html
     .pipe data (f) ->
       f = path.relative("#{SRC}/views", f.path).slice(0, -4)
       JSON.parse fs.readFileSync "#{SRC}/data/#{f}.json", "utf-8"
     .pipe pug()
-    .pipe gulp.dest(DEST)
+    .pipe to DEST
 
 # Wipe everything if necessary
 gulp.task "clean", ->
-  del(["#{DEST}/**/*.html", "#{DEST}/css"])
+  del paths.dest
 
 gulp.task "default", ["html", "css"]

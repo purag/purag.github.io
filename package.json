@@ -20,6 +20,7 @@
     "coffee-script": "^1.11.1",
     "del": "^2.2.2",
     "gulp-data": "^1.2.1",
-    "gulp-pug": "^3.1.0"
+    "gulp-pug": "^3.1.0",
+    "gulp-sass": "^3.0.0"
   }
 }
