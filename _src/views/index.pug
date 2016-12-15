@@ -6,7 +6,8 @@ block content
   h3 Experience
   .card-container
     each e in experience
-      +experience(e)
+      if (e.show)
+        +experience(e)
   h3 Projects
   p And even more stuff here!
 
@@ -14,8 +15,7 @@ block sidebar
   aside.sidebar
     h3 Links
     p
-      a.ext(href="mailto://me@purag.me") #[i.fa.fa-envelope-o.fa-lg] me@purag.me
-      a.ext(href="http://github.com/purag") #[i.fa.fa-github.fa-lg] github
-      a.ext(href="http://stackoverflow.com/u/814761") #[i.fa.fa-stack-overflow.fa-lg] stack overflow
+      each l in links
+        a.ext(href=l.href) #[i(class="fa fa-lg fa-" + l.icon)] #{l.text}
     h3 Skills
     p A list of things would go here!
