@@ -112,10 +112,12 @@ p {
   font-family: "Martel", serif;
   font-weight: 300; }
   p a {
+    text-shadow: 1px 1px 0px #f9f9f9, 2px 2px 0px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: #f05e25;
     transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
     p a:hover {
+      text-shadow: none;
       color: #c04729;
       background: rgba(0, 0, 0, 0.05);
       border-radius: 3px;
