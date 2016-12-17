@@ -3,10 +3,8 @@
 @keyframes blink
   0%, 20%
     opacity: 1
-
   90%, 100%
     opacity: 0
-
 
 html
   margin: 0
@@ -144,10 +142,12 @@ code
 .experience
   box-sizing: border-box
   margin: 10px 0
+  position: relative
   background: #fff
-  border: 1px solid rgba(0, 0, 0, 0.2)
+  border: 1px dashed rgba(0, 0, 0, 0.2)
   border-radius: 5px
   padding: 10px
+  color: #000
   time
     float: right
     font-size: 0.9em
@@ -180,6 +180,24 @@ code
       font-family: "Inconsolata", monospace
       font-size: 0.9em
       line-height: 1.6em
+
+a.experience
+  display: block
+  text-decoration: none
+  border-style: solid
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+  &:after
+    content: "\f08e"
+    font-family: "FontAwesome", sans-serif
+    color: rgba(0,0,0,0.2)
+    position: absolute
+    right: 10px
+    bottom: 10px
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+  &:hover
+    border-color: #f05e25
+    &:after
+      color: #f05e25
 
 a.ext
   display: block
