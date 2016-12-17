@@ -15,7 +15,7 @@ mixin _experience (e)
 
 mixin experience (e)
   if (e.href)
-    a(href=e.href).experience
+    a(href=e.href target="_blank").experience
       +_experience(e)
   else
     article.experience
