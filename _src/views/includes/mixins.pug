@@ -1,12 +1,22 @@
-mixin experience (e)
-  article.experience
-    h4= e.role
+mixin _experience (e)
+  h4= e.company ? e.role : e.project
+  if (e.end)
     time #{e.start} &ndash; #{e.end}
-    if e.company
-      h5= e.company
-    ul
-      each t in e.tasks
-        li= t
-    dl
-      each s in e.skills
-        dt= s
+  else
+    time #{e.start}
+  if e.company
+    h5= e.company
+  ul
+    each t in e.tasks
+      li= t
+  dl
+    each s in e.skills
+      dt= s
+
+mixin experience (e)
+  if (e.href)
+    a(href=e.href).experience
+      +_experience(e)
+  else
+    article.experience
+      +_experience(e)

@@ -1,5 +1,6 @@
 experience:
   -
+    href:    'http://google.com'
     role:    'Software Engineer Intern - upcoming'
     start:   'Jun 2017'
     end:     'Sep 2017'
@@ -65,7 +66,88 @@ experience:
       - 'PHP'
       - 'JavaScript'
     show: false
-projects: []
+projects:
+  -
+    href:    'http://github.com/purag/archsim'
+    start:   'May 2016'
+    end:     'present'
+    project: 'archsim'
+    tasks:
+      - 'Highly extensible simulator for user-defined assembly language architectures'
+    skills:
+      - 'JavaScript'
+      - 'C'
+      - 'Assembly'
+    show: true
+  -
+    href:    'http://github.com/purag/cse110sp16'
+    start:   'Mar 2016'
+    end:     'Jun 2016'
+    project: 'Adventour'
+    tasks:
+      - 'Served as lead developer on Android app to create and take walking "tours"'
+      - 'Built database access wrapper in Android and RESTful data service with node-mysql'
+    skills:
+      - 'Android'
+      - 'Node.js'
+      - 'Express'
+      - 'Java'
+      - 'JavaScript'
+      - 'SQL'
+    show: true
+  -
+    href:    'http://github.com/purag/gcc.js'
+    start:   'Jul 2015'
+    end:     'present'
+    project: 'gcc.js'
+    tasks:
+      - 'Full-scale C compiler built with JavaScript'
+    skills:
+      - 'JavaScript'
+      - 'C'
+      - 'Assembly'
+    show: true
+  -
+    href:    'http://github.com/purag/PearleyParser'
+    start:   'Jul 2015'
+    end:     'present'
+    project: 'PearleyParser'
+    tasks:
+      - 'Lexical analyzer and parser generator'
+      - 'JavaScript implementation of the Earley parsing algorithm'
+    skills:
+      - 'JavaScript'
+      - 'Lexical Analysis'
+      - 'Parsing'
+    show: true
+  -
+    href:    'http://stackoverflow.com/u/814761'
+    start:   'Jul 2011'
+    end:     'present'
+    project: 'Stack Overflow'
+    tasks:
+      - '12,000+ reputation points with over 400 questions and answers'
+    skills:
+      - 'HTML'
+      - 'CSS'
+      - 'JavaScript'
+      - 'jQuery'
+      - 'Java'
+      - 'C'
+    show: true
+  -
+    start:   'Sep 2015'
+    project: 'Piazza Hackathon'
+    tasks:
+      - 'Web application that feeds data from student notes into live feedback visualizations for lecturers'
+      - 'Ranked with team as finalists'
+    skills:
+      - 'JavaScript'
+      - 'Node.js'
+      - 'Express.io'
+      - 'MongoDB'
+      - 'Mongoose'
+    show: true
 links:
   -
     href: 'mailto://me@purag.me'

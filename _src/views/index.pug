@@ -9,7 +9,10 @@ block content
       if (e.show)
         +experience(e)
   h3 Projects
-  p And even more stuff here!
+  .card-container
+    each p in projects
+      if (p.show)
+        +experience(p)
 
 block sidebar
   aside.sidebar
