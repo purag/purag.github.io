@@ -1,0 +1,17 @@
+links:
+  -
+    href: 'mailto://me@purag.me'
+    icon: 'envelope-o'
+    text: 'me@purag.me'
+  -
+    href: 'http://github.com/purag'
+    icon: 'github'
+    text: 'github'
+  -
+    href: 'http://stackoverflow.com/u/814761'
+    icon: 'stack-overflow'
+    text: 'stack overflow'
+  -
+    href: 'http://twitter.com/purag'
+    icon: 'twitter'
+    text: 'twitter'

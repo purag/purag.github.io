@@ -1,0 +1,15 @@
+extends ../includes/page.pug
+
+block nav
+  - var cur = "/blog"
+
+block content
+  h2 Blog
+  p Coming soon!
+
+block sidebar
+  aside.sidebar
+    h3 Links
+    p
+      each l in links
+        a.ext(href=l.href target="_blank") #[i(class="fa fa-lg fa-" + l.icon)] #{l.text}
