@@ -1,11 +1,20 @@
 experience:
   -
-    role:    'Software Engineer Intern - upcoming'
+    role:    'Incoming Software Engineering Intern'
     start:   'Jun 2017'
     end:     'Sep 2017'
     company: 'Microsoft'
     tasks:
       - 'Working on Cortana under the Windows Shell Team'
+    skills: []
+    show: true
+  -
+    role:    'Incoming Software Engineering Intern'
+    start:   'Apr 2017'
+    end:     'Jun 2017'
+    company: 'YouTube'
+    tasks:
+      - 'Working on YouTube TV'
     skills: []
     show: true
   -
