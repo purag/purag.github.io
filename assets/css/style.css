@@ -63,46 +63,70 @@ h1 {
     margin-bottom: 3px;
     font-size: 0.9em;
     box-sizing: border-box; }
+    .sidebar .skill:hover:after {
+      float: right;
+      font-size: 0.9em;
+      color: rgba(0, 0, 0, 0.8); }
     .sidebar .skill.skill-10 {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 10%, transparent 10%); }
     .sidebar .skill.skill-10:hover {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 10%, transparent 10%); }
+      .sidebar .skill.skill-10:hover:after {
+        content: "10%"; }
     .sidebar .skill.skill-20 {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 20%, transparent 20%); }
     .sidebar .skill.skill-20:hover {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 20%, transparent 20%); }
+      .sidebar .skill.skill-20:hover:after {
+        content: "20%"; }
     .sidebar .skill.skill-30 {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 30%, transparent 30%); }
     .sidebar .skill.skill-30:hover {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 30%, transparent 30%); }
+      .sidebar .skill.skill-30:hover:after {
+        content: "30%"; }
     .sidebar .skill.skill-40 {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 40%, transparent 40%); }
     .sidebar .skill.skill-40:hover {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 40%, transparent 40%); }
+      .sidebar .skill.skill-40:hover:after {
+        content: "40%"; }
     .sidebar .skill.skill-50 {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 50%, transparent 50%); }
     .sidebar .skill.skill-50:hover {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 50%, transparent 50%); }
+      .sidebar .skill.skill-50:hover:after {
+        content: "50%"; }
     .sidebar .skill.skill-60 {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 60%, transparent 60%); }
     .sidebar .skill.skill-60:hover {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 60%, transparent 60%); }
+      .sidebar .skill.skill-60:hover:after {
+        content: "60%"; }
     .sidebar .skill.skill-70 {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 70%, transparent 70%); }
     .sidebar .skill.skill-70:hover {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 70%, transparent 70%); }
+      .sidebar .skill.skill-70:hover:after {
+        content: "70%"; }
     .sidebar .skill.skill-80 {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 80%, transparent 80%); }
     .sidebar .skill.skill-80:hover {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 80%, transparent 80%); }
+      .sidebar .skill.skill-80:hover:after {
+        content: "80%"; }
     .sidebar .skill.skill-90 {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 90%, transparent 90%); }
     .sidebar .skill.skill-90:hover {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 90%, transparent 90%); }
+      .sidebar .skill.skill-90:hover:after {
+        content: "90%"; }
     .sidebar .skill.skill-100 {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 100%, transparent 100%); }
     .sidebar .skill.skill-100:hover {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 100%, transparent 100%); }
+      .sidebar .skill.skill-100:hover:after {
+        content: "100%"; }
 
 nav {
   text-align: right;
