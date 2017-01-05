@@ -20,5 +20,11 @@ block sidebar
     p
       each l in links
         a.ext(href=l.href target="_blank") #[i(class="fa fa-fw fa-lg fa-" + l.icon)] #{l.text}
-    h3 Skills
-    p A list of things would go here!
+    h3 Languages
+    p
+      each l in langs
+        span(class="skill skill-" + l.expertise)= l.name
+    h3 Tools & Libraries
+    p
+      each t in tools
+        span(class="skill skill-" + t.expertise)= t.name
