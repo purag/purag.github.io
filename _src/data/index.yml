@@ -169,3 +169,50 @@ links:
     href: 'http://stackoverflow.com/u/814761'
     icon: 'stack-overflow'
     text: 'stack overflow'
+langs:
+  - 
+    name: "HTML"
+    expertise: 100
+  - 
+    name: "CSS"
+    expertise: 100
+  - 
+    name: "JavaScript"
+    expertise: 100
+  - 
+    name: "C"
+    expertise: 100
+  - 
+    name: "Java"
+    expertise: 100
+  -
+    name: "Bash"
+    expertise: 90
+  -
+    name: "C++"
+    expertise: 80
+  - 
+    name: "Python"
+    expertise: 60
+  - 
+    name: "SQL"
+    expertise: 60
+  - 
+    name: "OCaml"
+    expertise: 60
+tools:
+  -
+    name: "jQuery"
+    expertise: 100
+  -
+    name: "Git"
+    expertise: 100
+  -
+    name: "Node.js"
+    expertise: 90
+  -
+    name: "Express"
+    expertise: 80
+  -
+    name: "Android"
+    expertise: 50
