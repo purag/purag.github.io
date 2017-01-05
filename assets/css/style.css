@@ -22,16 +22,15 @@ body {
   padding: 30px;
   font-family: "Catamaran", sans-serif; }
 
-header {
+nav header {
   display: flex;
   align-items: center;
   flex: 0 0 100%;
   height: 100px; }
 
-h1 {
+nav h1 {
   margin: 0;
   display: inline-block;
-  width: 200px;
   box-sizing: border-box;
   padding: 15px;
   background: #1a252c;
@@ -43,13 +42,13 @@ h1 {
   font-size: 2.5em;
   color: #fff;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5); }
-  h1 a {
+  nav h1 a {
     text-decoration: none;
     color: #f05e25;
     transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
-    h1 a:hover {
+    nav h1 a:hover {
       color: #c04729; }
-  h1 span.blink {
+  nav h1 span.blink {
     animation: blink 1s infinite; }
 
 .sidebar {
@@ -279,3 +278,15 @@ a.ext {
   a.ext i {
     width: 20px;
     vertical-align: middle; }
+
+@media (max-width: 900px) {
+  header {
+    float: left; }
+  .sidebar, main {
+    flex-basis: 100%; }
+  .sidebar {
+    font-size: 1.2em; }
+  nav {
+    position: relative; }
+  main {
+    padding: 0; } }
