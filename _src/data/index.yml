@@ -76,6 +76,29 @@ experience:
     show: false
 projects:
   -
+    href:    'http://github.com/purag/momo'
+    start:   'Dec 2016'
+    end:     'present'
+    project: 'concur'
+    tasks:
+      - 'Incredibly lightweight CSS animation library for JavaScript'
+      - 'Published on NPM as momojs with 75+ downloads'
+    skills:
+      - 'JavaScript'
+      - 'CSS'
+      - 'Node.js'
+    show: true
+  -
+    href:    'http://github.com/purag/concur'
+    start:   'Oct 2016'
+    end:     'present'
+    project: 'concur'
+    tasks:
+      - 'User-level threading library for JavaScript'
+    skills:
+      - 'JavaScript'
+    show: true
+  -
     href:    'http://github.com/purag/archsim'
     start:   'May 2016'
     end:     'present'
