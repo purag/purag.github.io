@@ -79,7 +79,7 @@ projects:
     href:    'http://github.com/purag/momo'
     start:   'Dec 2016'
     end:     'present'
-    project: 'concur'
+    project: 'momo'
     tasks:
       - 'Incredibly lightweight CSS animation library for JavaScript'
       - 'Published on NPM as momojs with 75+ downloads'
@@ -97,6 +97,7 @@ projects:
       - 'User-level threading library for JavaScript'
     skills:
       - 'JavaScript'
+      - 'Concurrency'
     show: true
   -
     href:    'http://github.com/purag/archsim'
