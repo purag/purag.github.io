@@ -12,28 +12,31 @@ SRC  = "."
 DEST = ".."
 
 paths =
-  html: ["#{SRC}/views/**/*.pug", "!#{SRC}/views/includes/*"]
-  css:  ["#{SRC}/sass/*.sass"]
+  html:
+    src: ["#{SRC}/views/**/*.pug", "!#{SRC}/views/includes/*"]
+    dst: DEST
+  css:
+    src: ["#{SRC}/sass/*.sass"]
+    dst: "#{DEST}/assets/css"
   dest: ["#{DEST}/**/*.html", "#{DEST}/assets/"]
 
-task = gulp.task
 from = gulp.src
 to   = gulp.dest
 
 # Compile the SASS and copy to build directory
 gulp.task "css", ->
-  from paths.css
+  from paths.css.src
     .pipe sass().on "error", sass.logError
-    .pipe to "#{DEST}/assets/css"
+    .pipe to paths.css.dst
 
 # Render the pug templates w/ their respective locals
 gulp.task "html", ->
-  from paths.html
+  from paths.html.src
     .pipe data (f) ->
       f = path.relative("#{SRC}/views", f.path).slice(0, -4)
       yaml.readSync "#{SRC}/data/#{f}"
     .pipe pug()
-    .pipe to DEST
+    .pipe to paths.html.dst
 
 # Wipe everything if necessary
 gulp.task "clean", ->
