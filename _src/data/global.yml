@@ -1,0 +1,17 @@
+nav:
+  -
+    url: "/"
+    title: "Résumé"
+    sub:
+      -
+        url: "#experience"
+        title: "Experience"
+      -
+        url: "#projects"
+        title: "Projects"
+  -
+    url: "/about"
+    title: "About Me"
+  -
+    url: "/blog"
+    title: "Blog"

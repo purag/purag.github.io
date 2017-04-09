@@ -34,7 +34,9 @@ gulp.task "html", ->
   from paths.html.src
     .pipe data (f) ->
       f = path.relative("#{SRC}/views", f.path).slice(0, -4)
-      yaml.readSync "#{SRC}/data/#{f}"
+      Object.assign {}
+        , (yaml.readSync "#{SRC}/data/global")
+        , (yaml.readSync "#{SRC}/data/#{f}")
     .pipe pug()
     .pipe to paths.html.dst
 

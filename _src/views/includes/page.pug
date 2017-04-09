@@ -1,27 +1,7 @@
 include mixins.pug
 
--
- var nav = [
-  {
-    "url": "/",
-    "title": "Résumé",
-    "sub": {
-      "#experience": "Experience",
-      "#projects": "Projects"
-    }
-  },
-  {
-    "url": "/about",
-    "title": "About Me"
-  },
-  {
-    "url": "/blog",
-    "title": "Blog"
-  }
- ]
-
 block nav
-  -var cur = "/"
+  - var cur = "/"
 
 doctype html
 html
@@ -42,8 +22,8 @@ html
               a.active(href=item.url)= item.title
               if item.sub
                 .sub
-                  each title, url in item.sub
-                    a(href=url)= title
+                  each subitem in item.sub
+                    a(href=subitem.url)= subitem.title
             else
               a(href=item.url)= item.title
       main
