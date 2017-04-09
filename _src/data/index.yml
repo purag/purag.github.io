@@ -9,12 +9,12 @@ experience:
     skills: []
     show: true
   -
-    role:    'Incoming Software Engineering Intern'
+    role:    'Software Engineering Intern'
     start:   'Apr 2017'
     end:     'Jun 2017'
     company: 'YouTube'
     tasks:
-      - 'Working on YouTube TV'
+      - 'Enabling creator end screens on YouTube TV app'
     skills: []
     show: true
   -
