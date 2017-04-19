@@ -3,16 +3,18 @@ extends includes/page.pug
 block content
   h2 Hi, I'm Purag
   p I'm a junior at #[a(href="http://ucsd.edu") UC San Diego] studying #[a(href="http://cse.ucsd.edu") Computer Science]. My primary interests are in computability theory, computer architecture, and compiler construction.
-  h3#experience Experience
-  .card-container
-    each e in experience
-      if (e.show)
-        +experience(e)
-  h3#projects Projects
-  .card-container
-    each p in projects
-      if (p.show)
-        +experience(p)
+  section#experience
+    h3 Experience
+    .card-container
+      each e in experience
+        if (e.show)
+          +experience(e)
+  section#projects
+    h3 Projects
+    .card-container
+      each p in projects
+        if (p.show)
+          +experience(p)
 
 block sidebar
   aside.sidebar
