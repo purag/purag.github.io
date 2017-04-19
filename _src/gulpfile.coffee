@@ -6,6 +6,10 @@ pug  = require "gulp-pug"
 del  = require "del"
 sass = require "gulp-sass"
 yaml = require "node-yaml"
+cat  = require "gulp-concat"
+name = require "gulp-rename"
+cfee = require "gulp-coffee"
+ugly = require "gulp-uglify"
 
 # Set the destination directory for the build
 SRC  = "."
@@ -18,6 +22,9 @@ paths =
   css:
     src: ["#{SRC}/sass/*.sass"]
     dst: "#{DEST}/assets/css"
+  js:
+    src: ["#{SRC}/coffee/*.coffee"]
+    dst: "#{DEST}/assets/js"
   dest: ["#{DEST}/**/*.html", "#{DEST}/assets/"]
 
 from = gulp.src
@@ -40,8 +47,17 @@ gulp.task "html", ->
     .pipe pug()
     .pipe to paths.html.dst
 
+# Compile and uglify the coffeescript
+gulp.task "js", ->
+  from paths.js.src
+    .pipe cat "all.coffee"
+    .pipe cfee()
+    .pipe name "all.js"
+    .pipe ugly()
+    .pipe to paths.js.dst
+
 # Wipe everything if necessary
 gulp.task "clean", ->
   del paths.dest
 
-gulp.task "default", ["html", "css"]
+gulp.task "default", ["html", "css", "js"]
