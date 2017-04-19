@@ -158,7 +158,7 @@ projects:
     end:     'present'
     project: 'Stack Overflow'
     tasks:
-      - '12,000+ reputation points with over 400 questions and answers'
+      - '<span class="so-reputation"></span>+ reputation points with over 400 questions and answers'
     skills:
       - 'HTML'
       - 'CSS'

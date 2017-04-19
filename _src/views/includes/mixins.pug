@@ -8,7 +8,7 @@ mixin _experience (e)
     h5= e.company
   ul
     each t in e.tasks
-      li= t
+      li !{t}
   dl
     each s in e.skills
       dt= s
