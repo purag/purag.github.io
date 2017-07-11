@@ -2,11 +2,13 @@ experience:
   -
     role:    'Software Engineering Intern'
     start:   'Jul 2017'
-    end:     'Sep 2017'
+    end:     'present'
     company: 'Microsoft'
     tasks:
-      - 'Working on Cortana under the Windows Shell Team'
-    skills: []
+      - 'Working on Core UX team'
+    skills:
+      - 'XAML'
+      - 'C++/CX'
     show: true
   -
     role:    'Software Engineering Intern'
