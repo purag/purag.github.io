@@ -1,7 +1,7 @@
 experience:
   -
-    role:    'Incoming Software Engineering Intern'
-    start:   'Jun 2017'
+    role:    'Software Engineering Intern'
+    start:   'Jul 2017'
     end:     'Sep 2017'
     company: 'Microsoft'
     tasks:
@@ -14,8 +14,13 @@ experience:
     end:     'Jun 2017'
     company: 'YouTube'
     tasks:
-      - 'Enabling creator end screens on YouTube TV app'
-    skills: []
+      - 'Added sophisticated components and substates to YouTube television application'
+      - 'Implemented arrow-key navigation between arbitrarily placed onscreen elements'
+      - 'Unit tested thoroughly using Jasmine framework'
+    skills:
+      - 'JavaScript'
+      - 'Closure Compiler'
+      - 'Jasmine'
     show: true
   -
     role:    'Software Engineer Intern'
