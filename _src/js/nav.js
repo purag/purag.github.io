@@ -29,7 +29,6 @@ class NavSection {
 
 const navSections = Array.from(document.querySelectorAll('.sub a'))
   .map((elem) => new NavSection(elem));
-navSections[0].activate();
 
 window.addEventListener('scroll', () => {
   for (let s of navSections)
