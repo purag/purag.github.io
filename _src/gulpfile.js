@@ -7,9 +7,9 @@ const del = require('del');
 const sass = require('gulp-sass');
 const yaml = require('node-yaml');
 const concat = require('gulp-concat');
-const rename = require('gulp-rename');
-const coffee = require('gulp-coffee');
-const uglify = require('gulp-uglify');
+const uglify = require('uglify-es');
+const composer = require('gulp-uglify/composer');
+const compressJS = composer(uglify, console);
 
 // Set the destination directory for the build
 let SRC = '.';
@@ -25,7 +25,7 @@ const paths = {
     dst: `${DEST}/assets/css`,
   },
   js: {
-    src: [`${SRC}/coffee/*.coffee`],
+    src: [`${SRC}/js/*.js`],
     dst: `${DEST}/assets/js`,
   },
   dest: [`${DEST}/**/*.html`, `${DEST}/assets/`]
@@ -53,13 +53,11 @@ gulp.task('html', () => {
     .pipe(to(paths.html.dst));
 });
 
-// Compile and uglify the coffeescript
+// Concatenate and ugify the JavaScript
 gulp.task('js', () => {
   from(paths.js.src)
-    .pipe(concat('all.coffee'))
-    .pipe(coffee())
-    .pipe(rename('all.js'))
-    .pipe(uglify())
+    .pipe(concat('all.js'))
+    .pipe(compressJS())
     .pipe(to(paths.js.dst));
 });
 
