@@ -1,0 +1,17 @@
+extends includes/page.pug
+
+block filecomment
+  | ---
+  | permalink: /404.html
+  | ---
+  |
+
+block content
+  h2 Oops! That page doesn't exist.
+  p You must have taken a wrong turn somewhere.
+  p
+    | You can 
+    a(href='javascript:history.back()') go back
+    | or
+    a(href='/') go home
+    | .

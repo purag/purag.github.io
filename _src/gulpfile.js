@@ -49,9 +49,14 @@ function paths () {
 function html () {
   return gulp.src(paths().html.src)
     .pipe(data((f) => {
+      const globals = yaml.readSync(`${src}/data/global`);
       f = path.relative(`${src}/views`, f.path).slice(0, -4);
-      return Object.assign({}, yaml.readSync(`${src}/data/global`),
-        yaml.readSync(`${src}/data/${f}`));
+      f = `${src}/data/${f}.yml`;
+      let locals = {};
+      if (fs.existsSync(f)) {
+        locals = yaml.readSync(f);
+      }
+      return Object.assign({}, globals, locals);
     }))
     .pipe(pug())
     .pipe(gulp.dest(paths().html.dst))
