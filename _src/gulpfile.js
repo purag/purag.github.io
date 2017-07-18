@@ -15,89 +15,117 @@ const yaml = require('node-yaml');
 const compressJS = composer(uglify, console);
 
 // Set the destination directory for the build
-const SRC = '.';
+const src = '.';
 const DEST_BUILD = '..';
 const DEST_DEV = '../.devbuild';
-let DEST = DEST_BUILD;
+let dest = DEST_BUILD;
+
+const PORT_BUILD = 8080;
+const PORT_DEV = 8081;
+let port = PORT_BUILD;
 
 function paths () {
   return {
     html: {
-      all: `${SRC}/views/**/*.pug`,
-      src: [`${SRC}/views/**/*.pug`, `!${SRC}/views/includes/*`],
-      dst: DEST,
+      all: `${src}/views/**/*.pug`,
+      src: [`${src}/views/**/*.pug`, `!${src}/views/includes/*`],
+      dst: dest,
     },
     css: {
-      all: `${SRC}/sass/**/*.sass`,
-      src: [`${SRC}/sass/style.sass`],
-      dst: `${DEST}/assets/css`,
+      all: `${src}/sass/**/*.sass`,
+      src: [`${src}/sass/style.sass`],
+      dst: `${dest}/assets/css`,
     },
     js: {
-      all: `${SRC}/js/**/*.js`,
-      src: [`${SRC}/js/*.js`],
-      dst: `${DEST}/assets/js`,
+      all: `${src}/js/**/*.js`,
+      src: [`${src}/js/*.js`],
+      dst: `${dest}/assets/js`,
     },
-    dest: [`${DEST}/**/*.html`, `${DEST}/assets/`],
+    dest: [`${dest}/**/*.html`, `${dest}/assets/`],
   };
 }
 
-const from = gulp.src;
-const to = gulp.dest;
-
 // Render the pug templates w/ their respective locals
-function html (done) {
-  from(paths().html.src)
+function html () {
+  return gulp.src(paths().html.src)
     .pipe(data((f) => {
-      f = path.relative(`${SRC}/views`, f.path).slice(0, -4);
-      return Object.assign({}, yaml.readSync(`${SRC}/data/global`),
-        yaml.readSync(`${SRC}/data/${f}`));
+      f = path.relative(`${src}/views`, f.path).slice(0, -4);
+      return Object.assign({}, yaml.readSync(`${src}/data/global`),
+        yaml.readSync(`${src}/data/${f}`));
     }))
     .pipe(pug())
-    .pipe(to(paths().html.dst))
+    .pipe(gulp.dest(paths().html.dst))
     .pipe(connect.reload());
-  done();
 }
 gulp.task(html);
 
 // Compile the SASS and copy to build directory
-function css (done) {
-  from(paths().css.src)
+function css () {
+  return gulp.src(paths().css.src)
     .pipe(sass().on('error', sass.logError))
-    .pipe(to(paths().css.dst))
+    .pipe(gulp.dest(paths().css.dst))
     .pipe(connect.reload());
-  done();
 }
 gulp.task(css);
 
 // Concatenate and ugify the JavaScript
-function js (done) {
-  from(paths().js.src)
+function js () {
+  return gulp.src(paths().js.src)
     .pipe(concat('all.js'))
     .pipe(compressJS())
-    .pipe(to(paths().js.dst))
+    .pipe(gulp.dest(paths().js.dst))
     .pipe(connect.reload());
-  done();
 }
 gulp.task(js);
 
-// Wipe everything if necessary
-gulp.task('clean', (done) => {
-  del(paths().dest, done);
-});
-
 // Build everything.
-const build_all = gulp.parallel(html, css, js);
-gulp.task('default', build_all);
+function build (done) {
+  gulp.parallel(html, css, js)();
+  done();
+}
+gulp.task(build);
+gulp.task('default', build);
 
-gulp.task('dev', (done) => {
-  DEST = DEST_DEV;
-  build_all();
-  connect.server({
-    livereload: true,
-    root: DEST,
-  });
+// Run the site locally.
+function server (done) {
+  gulp.series(build, (done) => {
+    connect.server({
+      livereload: true,
+      port: port,
+      root: dest,
+    });
+    done();
+  })();
+  done();
+}
+gulp.task(server);
+
+// Wipe everything if necessary
+function clean (done) {
+  del.sync(paths().dest, {force: true});
+  done();
+}
+gulp.task(clean);
+
+// Development tasks
+function dev (done) {
+  dest = DEST_DEV;
+  port = PORT_DEV;
+  done();
+}
+
+function watch (done) {
   gulp.watch(paths().html.all, html);
   gulp.watch(paths().css.all, css);
   gulp.watch(paths().js.all, js);
-  del(DEST_DEV, done);
-});
+  done();
+}
+
+gulp.task('dev:build', gulp.series(dev, build));
+
+gulp.task('dev:server', gulp.series(dev, watch, server));
+
+gulp.task('dev:clean', gulp.series(dev, clean, (done) => {
+  del.sync(dest, {force: true});
+  done();
+}));
