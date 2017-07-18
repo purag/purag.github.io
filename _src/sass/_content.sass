@@ -1,0 +1,128 @@
+main
+  flex: 1
+  padding: 0 40px
+
+h2
+  font-size: 2em
+  font-weight: 600
+  margin: 0 0 15px 0
+
+h3
+  margin: 0
+  font-weight: 600
+  font-size: 1.35em
+
+p
+  font-family: "Martel", serif
+  font-weight: 300
+  margin: 0 0 15px 0
+
+  a
+    color: #f05e25
+    text-decoration: none
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+    &:hover
+      color: #c04729
+      background: rgba(0, 0, 0, 0.05)
+      border-radius: 3px
+      margin-bottom: 2px
+
+code
+  background: #f1f1f1
+  border: 1px solid rgba(0, 0, 0, 0.1)
+  border-radius: 5px
+  display: inline-block
+  font-family: "Inconsolata", monospace
+  font-size: 0.9em
+  line-height: 1.6em
+  margin: 5px
+  padding: 0 5px
+
+.card-container
+  margin-bottom: 15px
+
+  .experience
+    background: #fff
+    border: 1px dashed rgba(0, 0, 0, 0.2)
+    border-radius: 5px
+    box-sizing: border-box
+    color: #000
+    margin: 10px 0
+    padding: 10px
+    position: relative
+
+    time
+      float: right
+      font-size: 0.9em
+
+    h4
+      color: #f05e25
+      float: left
+      margin: 0
+
+    h5
+      clear: both
+      margin: 0 0 4px 0
+
+    ul
+      clear: both
+      list-style-type: none
+      margin: 0
+      padding: 0
+
+      li
+        font-family: "Martel", serif
+        font-size: 0.8em
+
+        &:before
+          content: "\25b8  "
+
+    dl
+      margin: 0
+
+      dt
+        background: #f1f1f1
+        border: 1px solid rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        display: inline-block
+        font-family: "Inconsolata", monospace
+        font-size: 0.9em
+        line-height: 1.6em
+        margin: 5px
+        padding: 0 5px
+
+    &[href]
+      border-style: solid
+      display: block
+      text-decoration: none
+      transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+      &:after
+        bottom: 10px
+        color: rgba(0,0,0,0.2)
+        content: "\f08e"
+        font-family: "FontAwesome", sans-serif
+        position: absolute
+        right: 10px
+        transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+      &:hover
+        border-color: #f05e25
+
+        &:after
+          color: #f05e25
+
+a.ext
+  border-radius: 3px
+  color: #000
+  display: block
+  font-size: 0.8em
+  margin: 3px 0
+  padding: 8px
+  text-decoration: none
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+  i
+    vertical-align: middle
+    width: 20px

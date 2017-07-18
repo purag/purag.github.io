@@ -1,14 +1,16 @@
-const gulp = require('gulp');
-const data = require('gulp-data');
-const path = require('path');
-const fs = require('fs');
-const pug = require('gulp-pug');
-const del = require('del');
-const sass = require('gulp-sass');
-const yaml = require('node-yaml');
-const concat = require('gulp-concat');
-const uglify = require('uglify-es');
 const composer = require('gulp-uglify/composer');
+const concat = require('gulp-concat');
+const data = require('gulp-data');
+const del = require('del');
+const fs = require('fs');
+const gulp = require('gulp');
+const path = require('path');
+const pug = require('gulp-pug');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const uglify = require('uglify-es');
+const yaml = require('node-yaml');
+
 const compressJS = composer(uglify, console);
 
 // Set the destination directory for the build
@@ -21,7 +23,7 @@ const paths = {
     dst: DEST,
   },
   css: {
-    src: [`${SRC}/sass/*.sass`],
+    src: [`${SRC}/sass/style.sass`],
     dst: `${DEST}/assets/css`,
   },
   js: {

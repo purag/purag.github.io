@@ -1,0 +1,98 @@
+nav
+  text-align: right
+  position: fixed
+
+  header
+    flex: 0 0 100%
+    margin-bottom: 10px
+
+  h1
+    background: #1a252c
+    border: 2px solid rgba(0, 0, 0, 0.3)
+    border-radius: 5px
+    box-sizing: border-box
+    color: #fff
+    display: inline-block
+    font-family: "Inconsolata", monospace
+    font-size: 2.5em
+    font-weight: 700
+    margin: 0
+    padding: 15px
+    text-align: center
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5)
+
+    a
+      color: #f05e25
+      text-decoration: none
+      transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+      &:hover
+        color: #c04729
+
+    span.blink
+      animation: blink 1s infinite
+
+  > a
+    color: #bbb
+    display: block
+    font-weight: 500
+    text-decoration: none
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+    &:hover
+      color: #222
+
+    &.active
+      color: #f05e25
+      font-weight: 700
+
+      + a
+        margin-top: 15px
+
+    + a.active
+      margin-top: 15px
+
+  .sub
+    font-size: 0.8em
+    margin-bottom: 15px
+    text-transform: lowercase
+
+    a
+      color: #bbb
+      display: block
+      font-weight: 500
+      text-decoration: none
+      transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+      &:hover
+        color: #222
+
+      &.active
+        color: #000
+        font-weight: 700
+
+.sidebar
+  align-self: flex-start
+  flex: 0 0 200px
+
+  .skill
+    border-radius: 3px
+    box-sizing: border-box
+    display: inline-block
+    font-size: 0.9em
+    margin-bottom: 3px
+    padding: 2px 6px
+    width: 100%
+
+    &:hover:after
+      color: rgba(0,0,0,0.8)
+      float: right
+      font-size: 0.9em
+
+    @each $l in 10 20 30 40 50 60 70 80 90 100
+      &.skill-#{$l}
+        background: linear-gradient(to right, rgba(0,0,0,0.05) $l#{"%"}, transparent $l#{"%"})
+      &.skill-#{$l}:hover
+        background: linear-gradient(to right, rgba(0,0,0,0.1) $l#{"%"}, transparent $l#{"%"})
+        &:after
+          content: "#{$l}%"

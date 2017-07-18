@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Martel|Catamaran|Inconsolata|Roboto+Slab");
+@import url(//fonts.googleapis.com/css?family=Martel);
+@import url(//fonts.googleapis.com/css?family=Catamaran);
+@import url(//fonts.googleapis.com/css?family=Inconsolata);
+@import url(//fonts.googleapis.com/css?family=Roboto+Slab);
 @keyframes blink {
   0%, 20% {
     opacity: 1; }
@@ -6,64 +9,96 @@
     opacity: 0; } }
 
 html {
-  margin: 0;
-  background: #f9f9f9; }
+  background: #f9f9f9;
+  margin: 0; }
 
 body {
-  margin: 0;
   background: #f9f9f9;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin: 0; }
 
 .container {
-  flex: 0 1 1200px;
   display: flex;
+  flex: 0 1 1200px;
   flex-wrap: wrap;
-  padding: 30px;
-  font-family: "Catamaran", sans-serif; }
+  font-family: "Catamaran", sans-serif;
+  padding: 30px; }
 
-nav header {
-  flex: 0 0 100%;
-  margin-bottom: 10px; }
-
-nav h1 {
-  margin: 0;
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 15px;
-  background: #1a252c;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  text-align: center;
-  font-family: "Inconsolata", monospace;
-  font-weight: 700;
-  font-size: 2.5em;
-  color: #fff;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5); }
-  nav h1 a {
+nav {
+  text-align: right;
+  position: fixed; }
+  nav header {
+    flex: 0 0 100%;
+    margin-bottom: 10px; }
+  nav h1 {
+    background: #1a252c;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    font-family: "Inconsolata", monospace;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5); }
+    nav h1 a {
+      color: #f05e25;
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
+      nav h1 a:hover {
+        color: #c04729; }
+    nav h1 span.blink {
+      animation: blink 1s infinite; }
+  nav > a {
+    color: #bbb;
+    display: block;
+    font-weight: 500;
     text-decoration: none;
-    color: #f05e25;
     transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
-    nav h1 a:hover {
-      color: #c04729; }
-  nav h1 span.blink {
-    animation: blink 1s infinite; }
+    nav > a:hover {
+      color: #222; }
+    nav > a.active {
+      color: #f05e25;
+      font-weight: 700; }
+      nav > a.active + a {
+        margin-top: 15px; }
+    nav > a + a.active {
+      margin-top: 15px; }
+  nav .sub {
+    font-size: 0.8em;
+    margin-bottom: 15px;
+    text-transform: lowercase; }
+    nav .sub a {
+      color: #bbb;
+      display: block;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
+      nav .sub a:hover {
+        color: #222; }
+      nav .sub a.active {
+        color: #000;
+        font-weight: 700; }
 
 .sidebar {
-  flex: 0 0 200px;
-  align-self: flex-start; }
+  align-self: flex-start;
+  flex: 0 0 200px; }
   .sidebar .skill {
-    display: inline-block;
-    width: 100%;
     border-radius: 3px;
-    padding: 2px 6px;
-    margin-bottom: 3px;
+    box-sizing: border-box;
+    display: inline-block;
     font-size: 0.9em;
-    box-sizing: border-box; }
+    margin-bottom: 3px;
+    padding: 2px 6px;
+    width: 100%; }
     .sidebar .skill:hover:after {
+      color: rgba(0, 0, 0, 0.8);
       float: right;
-      font-size: 0.9em;
-      color: rgba(0, 0, 0, 0.8); }
+      font-size: 0.9em; }
     .sidebar .skill.skill-10 {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 10%, transparent 10%); }
     .sidebar .skill.skill-10:hover {
@@ -125,64 +160,27 @@ nav h1 {
       .sidebar .skill.skill-100:hover:after {
         content: "100%"; }
 
-nav {
-  text-align: right;
-  position: fixed; }
-  nav .sub {
-    font-size: 0.8em;
-    text-transform: lowercase;
-    margin-bottom: 15px; }
-    nav .sub:hover a {
-      color: #bbb; }
-    nav .sub a {
-      display: block;
-      text-decoration: none;
-      color: #bbb;
-      font-weight: 500;
-      transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
-      nav .sub a:hover {
-        color: #222; }
-      nav .sub a.active {
-        color: #000;
-        font-weight: 700; }
-  nav > a {
-    display: block;
-    text-decoration: none;
-    color: #bbb;
-    font-weight: 500;
-    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  nav > a:hover {
-    color: #222; }
-  nav > a.active {
-    color: #f05e25;
-    font-weight: 700; }
-    nav > a.active + a {
-      margin-top: 15px; }
-  nav > a + a.active {
-    margin-top: 15px; }
-
 main {
   flex: 1;
   padding: 0 40px; }
 
-h2, h3 {
-  font-weight: 600; }
-
 h2 {
-  margin: 0 0 15px 0;
-  font-size: 2em; }
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0 0 15px 0; }
 
 h3 {
   margin: 0;
+  font-weight: 600;
   font-size: 1.35em; }
 
 p {
-  margin: 0 0 15px 0;
   font-family: "Martel", serif;
-  font-weight: 300; }
+  font-weight: 300;
+  margin: 0 0 15px 0; }
   p a {
-    text-decoration: none;
     color: #f05e25;
+    text-decoration: none;
     transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
     p a:hover {
       color: #c04729;
@@ -191,91 +189,89 @@ p {
       margin-bottom: 2px; }
 
 code {
-  display: inline-block;
-  margin: 5px;
   background: #f1f1f1;
-  padding: 0 5px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  display: inline-block;
   font-family: "Inconsolata", monospace;
   font-size: 0.9em;
-  line-height: 1.6em; }
+  line-height: 1.6em;
+  margin: 5px;
+  padding: 0 5px; }
 
 .card-container {
   margin-bottom: 15px; }
-
-.experience {
-  box-sizing: border-box;
-  margin: 10px 0;
-  position: relative;
-  background: #fff;
-  border: 1px dashed rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  padding: 10px;
-  color: #000; }
-  .experience time {
-    float: right;
-    font-size: 0.9em; }
-  .experience h4 {
-    float: left;
-    margin: 0;
-    color: #f05e25; }
-  .experience h5 {
-    margin: 0 0 4px 0;
-    clear: both; }
-  .experience ul {
-    clear: both;
-    margin: 0;
-    list-style-type: none;
-    padding: 0; }
-    .experience ul li {
-      font-size: 0.8em;
-      font-family: "Martel", serif; }
-      .experience ul li:before {
-        content: "\25b8  "; }
-  .experience dl {
-    margin: 0; }
-    .experience dl dt {
-      display: inline-block;
-      margin: 5px;
-      background: #f1f1f1;
-      padding: 0 5px;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      font-family: "Inconsolata", monospace;
-      font-size: 0.9em;
-      line-height: 1.6em; }
-
-a.experience {
-  display: block;
-  text-decoration: none;
-  border-style: solid;
-  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  a.experience:after {
-    content: "\f08e";
-    font-family: "FontAwesome", sans-serif;
-    color: rgba(0, 0, 0, 0.2);
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  a.experience:hover {
-    border-color: #f05e25; }
-    a.experience:hover:after {
-      color: #f05e25; }
+  .card-container .experience {
+    background: #fff;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #000;
+    margin: 10px 0;
+    padding: 10px;
+    position: relative; }
+    .card-container .experience time {
+      float: right;
+      font-size: 0.9em; }
+    .card-container .experience h4 {
+      color: #f05e25;
+      float: left;
+      margin: 0; }
+    .card-container .experience h5 {
+      clear: both;
+      margin: 0 0 4px 0; }
+    .card-container .experience ul {
+      clear: both;
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      .card-container .experience ul li {
+        font-family: "Martel", serif;
+        font-size: 0.8em; }
+        .card-container .experience ul li:before {
+          content: "\25b8  "; }
+    .card-container .experience dl {
+      margin: 0; }
+      .card-container .experience dl dt {
+        background: #f1f1f1;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        display: inline-block;
+        font-family: "Inconsolata", monospace;
+        font-size: 0.9em;
+        line-height: 1.6em;
+        margin: 5px;
+        padding: 0 5px; }
+    .card-container .experience[href] {
+      border-style: solid;
+      display: block;
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
+      .card-container .experience[href]:after {
+        bottom: 10px;
+        color: rgba(0, 0, 0, 0.2);
+        content: "\f08e";
+        font-family: "FontAwesome", sans-serif;
+        position: absolute;
+        right: 10px;
+        transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
+      .card-container .experience[href]:hover {
+        border-color: #f05e25; }
+        .card-container .experience[href]:hover:after {
+          color: #f05e25; }
 
 a.ext {
+  border-radius: 3px;
+  color: #000;
   display: block;
+  font-size: 0.8em;
   margin: 3px 0;
   padding: 8px;
-  border-radius: 3px;
-  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   text-decoration: none;
-  font-size: 0.8em;
-  color: #000; }
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
   a.ext i {
-    width: 20px;
-    vertical-align: middle; }
+    vertical-align: middle;
+    width: 20px; }
 
 @media (max-width: 900px) {
   header {
@@ -289,6 +285,6 @@ a.ext {
   main {
     padding: 0; } }
 
-@media (max-width: 410px) {
+@media (max-width: 900px) and (max-width: 410px) {
   nav h1 {
     font-size: 1.75em; } }
