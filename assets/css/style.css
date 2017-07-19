@@ -274,7 +274,8 @@ a.ext {
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
   a.ext i {
     vertical-align: middle;
-    width: 20px; }
+    width: 20px;
+    margin-right: 6px; }
 
 @media screen {
   .no-screen {
