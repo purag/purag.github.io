@@ -219,6 +219,11 @@ links:
     icon: 'github'
     text: '@purag'
   -
+    href: 'http://linkedin.com/in/purag'
+    print: 'linkedin.com/in/purag'
+    icon: 'linkedin'
+    text: '/purag'
+  -
     href: 'http://stackoverflow.com/u/814761'
     print: false
     icon: 'stack-overflow'
