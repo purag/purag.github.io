@@ -228,6 +228,15 @@ links:
     print: false
     icon: 'stack-overflow'
     text: 'stack overflow'
+education:
+  role:    'Computer Science'
+  start:   '2014'
+  end:     '2018'
+  company: 'UC San Diego'
+  tasks:
+    - 'GPA: 3.65'
+  skills: []
+  show: true
 langs:
   -
     name: 'HTML'

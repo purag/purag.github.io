@@ -25,7 +25,8 @@ block sidebar
           span.no-print= l.text
           span.no-screen= l.print
     h3.no-screen Education
-    p.no-screen UC San Diego '18, GPA: 3.65
+    .card-container
+      +experience(education)
     h3 Languages
     p
       each l in langs

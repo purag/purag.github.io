@@ -1,11 +1,13 @@
 mixin _experience (e)
-  h4= e.company ? e.role : e.project
+  h4= e.company ? e.company : e.project
+  if e.company
+    h5.no-screen= e.role
   if (e.end)
     time #{e.start} &ndash; #{e.end}
   else
     time #{e.start}
   if e.company
-    h5= e.company
+    h5.no-print= e.role
   ul
     each t in e.tasks
       li !{t}

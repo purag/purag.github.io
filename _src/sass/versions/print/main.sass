@@ -4,8 +4,11 @@
 html
   font-size: 9pt
 
+html, body
+  background: none
+
 .container
-  padding: 10px
+  padding: 0
 
 div.sidebar
   flex-basis: 100%
@@ -26,14 +29,39 @@ main
 
 .card-container .experience
   margin: 6px 0
-  border-style: solid !important
+  border-width: 0
   padding: 0 5px
 
   &:first-child
     margin-top: 0
 
+  &:after
+    display: none
+
+  h5
+    display: inline
+    margin-left: 10px
+
+  time
+    float: none
+    margin-left: 10px
+    color: #aaa
+
+  ul
+    font-size: 1.2em
+    line-height: 1.25em
+
+  dl
+    margin-left: -5px
+
+    dt
+      border: none
+      // line-height: 1.3em
+      margin: 4px
+
+
 #projects
-  width: calc(100% + 200px)
+  width: calc(100% + 230px)
 
   .card-container
     columns: 2
@@ -44,29 +72,26 @@ main
 
 aside.sidebar
   position: relative
+  flex-basis: 230px
 
   .links
-    position: absolute
-    top: -72px
-    height: 72px
-    right: 0
-    width: 500px
+    margin-top: -72px
     text-align: right
 
     a.ext
       display: inline-block
       background: #fff
       font-size: 1.1em
+      padding: 0 6px
       border: 1px solid rgba(0,0,0,0.2)
       border-radius: 4px
-      margin-left: 6px
+      margin: 1px
 
       i
         margin-right: 6px
 
   .skill
     background: rgba(0,0,0,0.05) !important
-    border: 1px solid rgba(0,0,0,0.2)
-    font-size: 1.05em
+    // border: 1px solid rgba(0,0,0,0.2)
     margin: 4px
     width: auto
