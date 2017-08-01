@@ -27,7 +27,7 @@ let port = PORT_BUILD;
 function paths () {
   return {
     html: {
-      all: `${src}/views/**/*.pug`,
+      all: [`${src}/views/**/*.pug`, `${src}/data/**/*.yml`],
       src: [`${src}/views/**/*.pug`, `!${src}/views/includes/*`],
       dst: dest,
     },

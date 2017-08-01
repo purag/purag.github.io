@@ -204,15 +204,23 @@ projects:
     show: true
 links:
   -
+    href: 'javascript:window.print();'
+    print: false
+    icon: 'print'
+    text: 'print me!'
+  -
     href: 'mailto://me@purag.me'
+    print: 'me@purag.me'
     icon: 'envelope-o'
     text: 'me@purag.me'
   -
     href: 'http://github.com/purag'
+    print: 'github.com/purag'
     icon: 'github'
-    text: 'github'
+    text: '@purag'
   -
     href: 'http://stackoverflow.com/u/814761'
+    print: false
     icon: 'stack-overflow'
     text: 'stack overflow'
 langs:

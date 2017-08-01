@@ -1,0 +1,72 @@
+@page
+  margin: 0
+
+html
+  font-size: 9pt
+
+.container
+  padding: 10px
+
+div.sidebar
+  flex-basis: 100%
+  
+  nav
+    text-align: left
+    position: relative
+
+    h1
+      padding: 10px
+      font-size: 3em
+    
+      .blink
+        animation: none !important
+
+main
+  padding: 0 10px 0 0
+
+.card-container .experience
+  margin: 6px 0
+  border-style: solid !important
+  padding: 0 5px
+
+  &:first-child
+    margin-top: 0
+
+#projects
+  width: calc(100% + 200px)
+
+  .card-container
+    columns: 2
+    column-gap: 6px
+
+    .experience
+      break-inside: avoid
+
+aside.sidebar
+  position: relative
+
+  .links
+    position: absolute
+    top: -72px
+    height: 72px
+    right: 0
+    width: 500px
+    text-align: right
+
+    a.ext
+      display: inline-block
+      background: #fff
+      font-size: 1.1em
+      border: 1px solid rgba(0,0,0,0.2)
+      border-radius: 4px
+      margin-left: 6px
+
+      i
+        margin-right: 6px
+
+  .skill
+    background: rgba(0,0,0,0.05) !important
+    border: 1px solid rgba(0,0,0,0.2)
+    font-size: 1.05em
+    margin: 4px
+    width: auto

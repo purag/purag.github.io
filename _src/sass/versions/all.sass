@@ -1,2 +1,11 @@
-@media (max-width: 900px)
+@media screen
+  .no-screen
+    display: none !important
+
+@media screen and (max-width: 900px)
   @import mobile/main
+
+@media print
+  .no-print
+    display: none !important
+  @import print/main

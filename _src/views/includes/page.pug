@@ -17,16 +17,21 @@ html
       .sidebar
         nav
           header
-            h1 #[a(href="http://purag.me") purag] >#[span.blink _]
+            h1
+              a(href="/")
+                | purag
+                span.no-screen  moumdjian
+              |  >
+              span.blink _
           each item in nav
             if cur === item.url
-              a.active(href=item.url)= item.title
+              a.no-print.active(href=item.url)= item.title
               if item.sub
-                .sub
+                .sub.no-print
                   each subitem in item.sub
                     a(href=subitem.url)= subitem.title
             else
-              a(href=item.url)= item.title
+              a.no-print(href=item.url)= item.title
       main
         block content
       block sidebar
