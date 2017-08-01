@@ -83,6 +83,21 @@ experience:
     show: false
 projects:
   -
+    href:    'http://github.com/hamazkayinpasadena/web'
+    start:   'May 2017'
+    end:     'present'
+    project: 'Hamazkayin Pasadena WordPress Theme'
+    tasks:
+      - 'Sophisticated WordPress theme for local Armenian cultural organization'
+      - 'Cutting-edge development tools and build process'
+    skills:
+      - 'Pug'
+      - 'Sass'
+      - 'PHP'
+      - 'JavaScript'
+      - 'WordPress'
+    show: true
+  -
     href:    'http://github.com/purag/momo'
     start:   'Dec 2016'
     end:     'present'
