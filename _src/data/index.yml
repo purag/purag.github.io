@@ -217,48 +217,63 @@ links:
     text: 'stack overflow'
 langs:
   - 
-    name: "HTML"
+    name: 'HTML'
     expertise: 100
   - 
-    name: "CSS"
+    name: 'CSS'
     expertise: 100
   - 
-    name: "JavaScript"
+    name: 'JavaScript'
     expertise: 100
   - 
-    name: "C"
+    name: 'C'
     expertise: 100
   - 
-    name: "Java"
+    name: 'Java'
     expertise: 100
   -
-    name: "Bash"
+    name: 'Pug'
     expertise: 90
   -
-    name: "C++"
+    name: 'Bash'
+    expertise: 90
+  -
+    name: 'Sass'
+    expertise: 80
+  -
+    name: 'C++'
     expertise: 80
   - 
-    name: "Python"
+    name: 'Python'
     expertise: 60
   - 
-    name: "SQL"
+    name: 'SQL'
     expertise: 60
   - 
-    name: "OCaml"
+    name: 'OCaml'
     expertise: 60
 tools:
   -
-    name: "jQuery"
+    name: 'jQuery'
     expertise: 100
   -
-    name: "Git"
+    name: 'Git'
     expertise: 100
   -
-    name: "Node.js"
+    name: 'Node.js'
     expertise: 90
   -
-    name: "Express"
+    name: 'Closure Compiler'
     expertise: 80
   -
-    name: "Android"
+    name: 'Closure Library'
+    expertise: 80
+  -
+    name: 'Express'
+    expertise: 80
+  -
+    name: 'Gulp'
+    expertise: 70
+  -
+    name: 'Android'
     expertise: 50
