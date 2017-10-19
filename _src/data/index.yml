@@ -2,13 +2,15 @@ experience:
   -
     role:    'Software Engineering Intern'
     start:   'Jul 2017'
-    end:     'present'
+    end:     'Sep 2017'
     company: 'Microsoft'
     tasks:
-      - 'Working on Core UX team'
+      - 'Utilized prerelease APIs to update user interface in a core Windows application used on over 100 million devices each month'
+      - 'Implemented data model to allow core Windows application to display and set system date and time information'
     skills:
       - 'XAML'
       - 'C++/CX'
+      - 'UWP'
     show: true
   -
     role:    'Software Engineering Intern'
@@ -16,8 +18,8 @@ experience:
     end:     'Jun 2017'
     company: 'YouTube'
     tasks:
-      - 'Added sophisticated components and substates to YouTube television application'
-      - 'Implemented arrow-key navigation between arbitrarily placed onscreen elements'
+      - 'Added Creator Endscreens to YouTube television application to drive activity to uploader channels and videos'
+      - 'Implemented functionality to enable TV remote/controller navigation of arbitrarily placed onscreen elements'
       - 'Unit tested thoroughly using Jasmine framework'
     skills:
       - 'JavaScript'
@@ -25,7 +27,7 @@ experience:
       - 'Jasmine'
     show: true
   -
-    role:    'Software Engineer Intern'
+    role:    'Software Engineering Intern'
     start:   'Jun 2016'
     end:     'Sep 2016'
     company: 'Pure Storage'
