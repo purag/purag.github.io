@@ -1,5 +1,15 @@
 experience:
   -
+    role:    'Software Engineer'
+    start:   'Oct 2018'
+    end:     ''
+    company: 'YouTube'
+    tasks:
+      - 'Incoming software engineer at YouTube on the Living Room team'
+    skills:
+      - 'JavaScript'
+    show: true
+  -
     role:    'Software Engineering Intern'
     start:   'Jul 2017'
     end:     'Sep 2017'
@@ -49,6 +59,8 @@ experience:
       - 'Holding office hours to go over homework problems and exam solutions'
       - 'Leading discussion sessions to go over upcoming assignments'
     skills:
+      - 'Programming Languages'
+      - 'Compiler Construction'
       - 'Java'
       - 'C'
       - 'C++'
