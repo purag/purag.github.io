@@ -1,13 +1,13 @@
 experience:
   -
     role:    'Software Engineer'
-    start:   'Oct 2018'
-    end:     ''
+    start:   'Sep 2018'
+    end:     'present'
     company: 'YouTube'
     tasks:
-      - 'Incoming software engineer at YouTube on the Living Room team'
+      - 'Working to improve the presentation of content on the YouTube living room platform'
     skills:
-      - 'JavaScript'
+      - 'TypeScript'
     show: true
   -
     role:    'Software Engineering Intern'
@@ -52,7 +52,7 @@ experience:
   -
     role:    'Tutor'
     start:   'Mar 2015'
-    end:     'present'
+    end:     'Jun 2018'
     company: 'UC San Diego CSE Department'
     tasks:
       - 'Assisting students during lab hours and grading programming assignments'
@@ -241,14 +241,14 @@ links:
     href: 'http://stackoverflow.com/u/814761'
     print: false
     icon: 'stack-overflow'
-    text: 'stack overflow'
+    text: 'Purag'
 education:
   role:    'Computer Science'
   start:   '2014'
   end:     '2018'
   company: 'UC San Diego'
   tasks:
-    - 'GPA: 3.65'
+    - 'GPA: 3.68'
   skills: []
   show: true
 langs:
